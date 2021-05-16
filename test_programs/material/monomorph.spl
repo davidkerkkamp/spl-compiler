@@ -1,0 +1,10 @@
+//Thou shan't monorphize blindly!
+f (x) :: a -> a {
+	print(x);
+	var r = f((x, x));
+	return r.fst;
+}
+
+main () :: -> Void {
+	print(f(42));
+}

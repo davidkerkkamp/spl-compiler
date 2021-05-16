@@ -1,0 +1,30 @@
+main() {
+    println( phi(26) );
+}
+
+// Greatest common divisor
+gcd(m, n) {
+    if (n < m) {
+        return gcd(n, m);
+    } else {
+        if (n == m) {
+            return n;
+        } else {
+            // n > m
+            return gcd(m, n - m);
+        }
+    }
+}
+
+// Euler's totient function
+phi(n) {
+    var amount = 0;
+    var k = 1;
+    while(k < n + 1) {
+        if(gcd(n, k) == 1) {
+            amount = amount + 1;
+        }
+        k = k + 1;
+    }
+    return amount;
+}

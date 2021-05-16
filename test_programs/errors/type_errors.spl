@@ -1,0 +1,13 @@
+var global = [];
+
+main() {
+    global = 4 : global;
+    f(1, 2);                        // Call f with 2 args, while 0 are expected
+}
+
+f(z) :: -> Void {                   // 1 arg given, but should not have args
+    var p = 0;
+    global = True : global;         // Type mismatch: expects bool list
+    var x = (x, x);                 // Type recursion error
+    return 10;                      // Return value while type should be Void
+}

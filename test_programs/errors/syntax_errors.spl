@@ -1,0 +1,35 @@
+/*
+    Lexing errors
+*
+
+main() :: $Int -> Int {     // Unexpected symbol $
+    return _;               // Unexpected symbol _
+}
+*/
+/****************************
+    Parse errors
+*/
+
+main() :: Int) -> Int {     // Syntax error, recover to ->
+    if(True) {
+        var x = z           // No semicolon
+        return 4 + ;        // Missing right operand, recover to ;
+    }
+
+    while(True) {
+        if x == True return 5;  // Syntax error, recover to closing bracket }
+    }
+    return 10;
+}
+
+func() {
+    if(t) {
+        var x = list.head;          // Unknown field
+    } else {
+        var y = 7 * ((unbalanced);  // Unbalanced brackets
+    }
+}
+
+empty() {
+    // Empty body error
+}

@@ -1,0 +1,28 @@
+
+main() {
+    global = 9;             // Use global before declaration
+    fun(5);                  // Call fun before declaration
+}
+
+var global = 10;
+
+fun(z) {
+    var z = 10;         // Hiding fun arg
+    var z = 6;          // Re-declaration error
+    if(bool) {          // bool undefined here
+        var local = False;
+        return z;
+    }
+    var bool = True;
+    return local;       // Local unknown in this scope
+}
+
+g() {
+    var global = True;      // Hiding global
+    fun fun = fun(10);      // Using same name for 3 different things
+    h();                    // Unknown function
+}
+
+g() {                   // Duplicate name error
+    return;
+}

@@ -1,0 +1,24 @@
+/*
+
+    Program with expressions
+
+*/
+
+main() {
+    and_or();
+}
+
+and_or() {
+    Bool b1 = True; Bool b2 = False;
+    print("b1 = "); print(b1); print(", b2 = "); print(b2); print('\n');
+
+    print("b1 && b2: ");
+    print(b1 && b2);
+    print('\n');
+    print("b1 || b2: ");
+    print(b1 || b2);
+    print('\n');
+    print("!b1 || b2: ");
+    print(!b1 || b2);
+    print('\n');
+}

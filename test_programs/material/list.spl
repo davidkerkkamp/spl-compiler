@@ -1,0 +1,19 @@
+equals2(a, b) :: [a] [a] -> Bool {
+	if (isEmpty(a) && isEmpty(b)) { return True; }
+	if (isEmpty(a) || isEmpty(b)) { return False; }
+	return (a.hd == b.hd) && equals (a.tl, b.tl);	
+}
+
+main() {
+    var l1 = 1:2:3:5:[];
+    var l2 = 1:2:3:5:[];
+    var l3 = 1:2:7:1:[];
+
+    println( equals2(l1, l2) );
+    println( equals2(l1, l3) );
+
+    println( equals(l1, l2) ); // Using built-in equals
+    println( equals(l1, l3) );
+
+    println( l1 == l2 ); // But not identical
+}

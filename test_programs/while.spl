@@ -1,0 +1,19 @@
+
+/*
+    loop 100 times and print each number, showing if it's even or odd
+*/
+main() {
+    var index = 0;
+    while(index < 100) {
+        if(index % 2 == 0) {
+            print("This is EVEN number: ");
+        } else {
+            print("This is ODD number: ");
+        }
+        print(index);
+        print('\n');
+        index = index + 1;
+    }
+    print("DONE");
+    print('\n');
+}

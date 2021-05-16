@@ -1,0 +1,43 @@
+
+
+main() {
+    returnVoid();
+}
+
+returnVoid() :: -> Void {         // Only some paths returning allowed
+    if(True) {
+
+    } else {
+        return;
+    }
+}
+
+returnVoid() :: -> Void {         // Allowed
+    if(True) {
+        return;
+    } else {
+        return;
+    }
+    return;             // Unreachable code
+}
+
+returnNoType() {                   // Not allowed to have some paths not returning if no fun type is given
+    while(True) {
+        return;
+    }
+}
+
+returnNoType2() {
+    while(True) {
+
+    }
+    return;                     // Eventually it returns
+    var x = 0;                  // Unreachable code
+}
+
+returnValue(x) :: Int -> Int {
+    if(x > 10) {
+        return x;
+    }
+    // Error: No return here
+}
